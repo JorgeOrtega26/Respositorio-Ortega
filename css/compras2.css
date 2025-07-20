@@ -1,0 +1,1160 @@
+
+        /* ESTILOS ESPECÍFICOS PARA SOLICITUDES */
+        .solicitudes-container {
+  background: white;
+  min-height: 100vh;
+}
+
+.solicitudes-header {
+  background: #f8fafc;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.solicitudes-header h1 {
+  margin: 0;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.solicitudes-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #6b7280;
+}
+
+.solicitudes-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.solicitudes-controls button,
+.solicitudes-controls a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #374151;
+}
+
+.solicitudes-controls button:hover,
+.solicitudes-controls a:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.solicitudes-controls button.active,
+.solicitudes-controls a.active {
+  background: #6366f1;
+  color: white;
+  border-color: #6366f1;
+}
+
+.solicitudes-controls .nuevo-btn {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.solicitudes-controls .nuevo-btn:hover {
+  background: #059669;
+  color: white;
+}
+
+.solicitudes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.solicitud-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.solicitud-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.solicitud-header-card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.solicitud-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.solicitud-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 150px;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #374151;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item.delete {
+  color: #ef4444;
+}
+
+.dropdown-item.delete:hover {
+  background: #fef2f2;
+}
+
+.solicitud-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.solicitud-info .proveedor {
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
+.solicitud-status {
+  margin: 1rem 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.nueva {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.status-badge.enviada {
+  background: #fef3c7;
+  color: #92400e;
+}
+.status-badge.confirmada {
+  background: #d1fae5;
+  color: #065f46;
+}
+.status-badge.orden_compra {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+.status-badge.cancelada {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.solicitud-actions {
+  padding: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5b21b6;
+  color: white;
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #059669;
+  color: white;
+}
+
+.btn-edit {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #d97706;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+/* ESTILOS PARA FORMULARIO DE SOLICITUD */
+.solicitud-form-container {
+  background: white;
+  min-height: 100vh;
+}
+
+.form-header {
+  background: #f8fafc;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-title h1 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.form-tabs {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 2rem;
+}
+
+.form-tab {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.form-tab.active {
+  color: #6366f1;
+  border-bottom-color: #6366f1;
+}
+
+.form-tab:hover:not(.active) {
+  color: #374151;
+}
+
+.form-content {
+  padding: 2rem;
+}
+
+.form-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.form-row.triple {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.subsection {
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.subsection:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.subsection h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.productos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.productos-table th,
+.productos-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.productos-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+}
+
+.add-product-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.add-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.add-link:hover {
+  text-decoration: underline;
+}
+
+.totales-section {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  text-align: right;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.total-final {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  border-top: 1px solid #d1d5db;
+  padding-top: 0.5rem;
+}
+
+.form-actions {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-form {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-form.primary {
+  background: #10b981;
+  color: white;
+}
+
+.btn-form.primary:hover {
+  background: #059669;
+  color: white;
+}
+
+.btn-form.secondary {
+  background: #6b7280;
+  color: white;
+  margin: inherit;
+  display: inline-flex;
+}
+
+.btn-form.secondary:hover {
+  background: #4b5563;
+  color: white;
+}
+
+/* MODALES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.producto-search {
+  position: relative;
+}
+
+.productos-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin-top: 2px;
+}
+
+.productos-dropdown.show {
+  display: block !important;
+}
+
+.producto-option {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.2s;
+}
+
+.producto-option:hover {
+  background: #f9fafb;
+}
+
+.producto-option:last-child {
+  border-bottom: none;
+}
+
+.producto-option .product-name {
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 4px;
+}
+
+.producto-option .product-details {
+  font-size: 12px;
+  color: #636e72;
+}
+
+.delivery-section {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.delivery-section h4 {
+  color: #92400e;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .solicitudes-header {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .solicitudes-info {
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .solicitudes-controls {
+    gap: 0.375rem;
+  }
+
+  .solicitudes-controls button,
+  .solicitudes-controls a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .solicitudes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .solicitud-header-card {
+    padding: 1.25rem;
+  }
+
+  .solicitud-actions {
+    padding: 1.25rem;
+    gap: 0.375rem;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .form-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .form-tabs {
+    padding: 0 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .form-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .form-tab {
+    padding: 0.875rem 1.25rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .form-content {
+    padding: 1.5rem;
+  }
+
+  .form-row.triple {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .productos-table th,
+  .productos-table td {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .form-actions {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .modal-content {
+    width: 85%;
+    max-width: 550px;
+  }
+}
+
+/* Mobile Devices (320px - 768px) */
+@media screen and (max-width: 768px) {
+  .solicitudes-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .solicitudes-header h1 {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .solicitudes-info {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .solicitudes-controls {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .solicitudes-controls button,
+  .solicitudes-controls a {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8125rem;
+    min-height: 48px;
+  }
+
+  .solicitudes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .solicitud-header-card {
+    padding: 1rem;
+  }
+
+  .solicitud-actions {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .btn-sm {
+    flex: 1;
+    min-width: 100px;
+    justify-content: center;
+    padding: 0.625rem 0.5rem;
+    font-size: 0.8125rem;
+    min-height: 44px;
+  }
+
+  .dropdown-menu {
+    min-width: 140px;
+    right: -10px;
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .form-title {
+    justify-content: center;
+  }
+
+  .form-title h1 {
+    font-size: 1.125rem;
+  }
+
+  .form-tabs {
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .form-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .form-tab {
+    flex: 0 0 auto;
+    min-width: 120px;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+
+  .form-content {
+    padding: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-row.triple {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+    padding: 0.875rem;
+  }
+
+  .subsection {
+    margin: 1.5rem 0;
+    padding-top: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
+  }
+
+  /* Tabla responsive con scroll horizontal */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .productos-table {
+    min-width: 600px;
+    margin: 0;
+    font-size: 0.8125rem;
+  }
+
+  .productos-table th,
+  .productos-table td {
+    padding: 0.75rem 0.5rem;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .productos-table th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background: #f8fafc;
+    z-index: 10;
+  }
+
+  .add-product-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .add-link {
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .totales-section {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+  }
+
+  .total-row {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+  }
+
+  .total-final {
+    font-size: 1rem;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .form-actions {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .btn-form {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 48px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  /* Agregar padding bottom al contenido para evitar que se oculte detrás de los botones fijos */
+  .form-content {
+    padding-bottom: 140px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: none;
+    margin: 1rem;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.125rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .productos-dropdown {
+    max-height: 200px;
+  }
+
+  .producto-option {
+    padding: 1rem;
+    min-height: 48px;
+  }
+
+  .delivery-section {
+    padding: 0.875rem;
+    margin: 0.875rem 0;
+  }
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .solicitudes-header h1 {
+    font-size: 1rem;
+  }
+
+  .solicitudes-controls button,
+  .solicitudes-controls a {
+    min-width: 100px;
+    padding: 0.625rem 0.375rem;
+    font-size: 0.75rem;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 0.375rem;
+    font-size: 0.75rem;
+  }
+
+  .form-tab {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.8125rem;
+    min-width: 100px;
+  }
+
+  .form-title h1 {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .productos-table {
+    font-size: 0.75rem;
+    min-width: 500px;
+  }
+
+  .productos-table th,
+  .productos-table td {
+    padding: 0.5rem 0.375rem;
+  }
+
+  .btn-form {
+    padding: 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .form-actions {
+    padding: 0.875rem;
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .solicitudes-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+  }
+
+  .solicitudes-header h1 {
+    flex: 1;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .solicitudes-info {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .solicitudes-controls {
+    flex-shrink: 0;
+  }
+
+  .solicitudes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.875rem;
+    padding: 0.875rem;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .btn-form {
+    flex: 1;
+  }
+
+  .form-content {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .solicitudes-controls button,
+  .solicitudes-controls a,
+  .btn-sm,
+  .btn-form,
+  .form-tab,
+  .dropdown-item,
+  .producto-option,
+  .add-link {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .solicitud-menu {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-close {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    min-height: 48px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .solicitud-card {
+    box-shadow: 0 0.5px 1.5px rgba(0, 0, 0, 0.1);
+  }
+
+  .solicitud-card:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .modal-content {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .solicitud-card,
+  .solicitudes-controls button,
+  .solicitudes-controls a,
+  .btn-sm,
+  .btn-form,
+  .form-tab,
+  .dropdown-item,
+  .producto-option,
+  .solicitud-menu,
+  .modal-close {
+    transition: none;
+  }
+
+  .solicitud-card:hover {
+    transform: none;
+  }
+}

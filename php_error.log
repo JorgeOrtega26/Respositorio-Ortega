@@ -1,0 +1,31 @@
+[01-Jul-2025 03:45:56 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in D:\XAMP\htdocs\ERPCabezalymodal\ERP\Gastos.php:379
+Stack trace:
+#0 D:\XAMP\htdocs\ERPCabezalymodal\ERP\Gastos.php(379): mysqli_stmt->bind_param('sssdsssi', 'cuarto', 'hospedaje', '2025-06-24', 145, 'efectivo', 'empleado', 'sdasdsad', 'recibo_685b3b19...', 4)
+#1 D:\XAMP\htdocs\ERPCabezalymodal\ERP\Gastos.php(56): editarGasto()
+#2 {main}
+  thrown in D:\XAMP\htdocs\ERPCabezalymodal\ERP\Gastos.php on line 379
+[01-Jul-2025 03:50:27 Europe/Berlin] 🔧 obtenerGastos() ejecutándose...
+[01-Jul-2025 03:50:27 Europe/Berlin] ✅ Sesión válida: Angel Steven
+[01-Jul-2025 03:50:27 Europe/Berlin] ✅ Conexión DB exitosa
+[01-Jul-2025 03:50:27 Europe/Berlin] ✅ Gastos encontrados: 2
+[01-Jul-2025 03:50:27 Europe/Berlin] ✅ Enviando respuesta JSON: {"success":true,"gastos":[{"id":24,"descripcion":"sda","categoria":"materiales","fecha_gasto":"2025-06-30","total":152,"metodo_pago":"tarjeta_credito","pagado_por":"empleado","estado":"desaprobado","archivo_recibo":null,"fecha_creacion":"2025-06-30 20:26:16","empleado":"Angel Steven","notas":""},{"id":4,"descripcion":"cuarto","categoria":"hospedaje","fecha_gasto":"2025-06-24","total":140,"metodo_pago":"efectivo","pagado_por":"empleado","estado":"aprobado","archivo_recibo":"recibo_685b3b19c17cb.jpg","fecha_creacion":"2025-06-24 18:56:09","empleado":"Dietri Josue","notas":"sdasdsad"}],"total_encontrados":2,"usuario":"Angel Steven","debug":"Funci\u00f3n ejecutada correctamente"}
+[01-Jul-2025 03:50:28 Europe/Berlin] 🔧 obtenerGastos() ejecutándose...
+[01-Jul-2025 03:50:28 Europe/Berlin] ✅ Sesión válida: Angel Steven
+[01-Jul-2025 03:50:28 Europe/Berlin] ✅ Conexión DB exitosa
+[01-Jul-2025 03:50:28 Europe/Berlin] ✅ Gastos encontrados: 2
+[01-Jul-2025 03:50:28 Europe/Berlin] ✅ Enviando respuesta JSON: {"success":true,"gastos":[{"id":24,"descripcion":"sda","categoria":"materiales","fecha_gasto":"2025-06-30","total":152,"metodo_pago":"tarjeta_credito","pagado_por":"empleado","estado":"desaprobado","archivo_recibo":null,"fecha_creacion":"2025-06-30 20:26:16","empleado":"Angel Steven","notas":""},{"id":4,"descripcion":"cuarto","categoria":"hospedaje","fecha_gasto":"2025-06-24","total":140,"metodo_pago":"efectivo","pagado_por":"empleado","estado":"aprobado","archivo_recibo":"recibo_685b3b19c17cb.jpg","fecha_creacion":"2025-06-24 18:56:09","empleado":"Dietri Josue","notas":"sdasdsad"}],"total_encontrados":2,"usuario":"Angel Steven","debug":"Funci\u00f3n ejecutada correctamente"}
+[01-Jul-2025 03:50:33 Europe/Berlin] 🔧 obtenerGastos() ejecutándose...
+[01-Jul-2025 03:50:33 Europe/Berlin] ✅ Sesión válida: Angel Steven
+[01-Jul-2025 03:50:33 Europe/Berlin] ✅ Conexión DB exitosa
+[01-Jul-2025 03:50:33 Europe/Berlin] ✅ Gastos encontrados: 2
+[01-Jul-2025 03:50:33 Europe/Berlin] ✅ Enviando respuesta JSON: {"success":true,"gastos":[{"id":24,"descripcion":"sda","categoria":"materiales","fecha_gasto":"2025-06-30","total":152,"metodo_pago":"tarjeta_credito","pagado_por":"empleado","estado":"desaprobado","archivo_recibo":null,"fecha_creacion":"2025-06-30 20:26:16","empleado":"Angel Steven","notas":""},{"id":4,"descripcion":"cuarto","categoria":"hospedaje","fecha_gasto":"2025-06-24","total":140,"metodo_pago":"efectivo","pagado_por":"empleado","estado":"aprobado","archivo_recibo":"recibo_685b3b19c17cb.jpg","fecha_creacion":"2025-06-24 18:56:09","empleado":"Dietri Josue","notas":"sdasdsad"}],"total_encontrados":2,"usuario":"Angel Steven","debug":"Funci\u00f3n ejecutada correctamente"}
+[01-Jul-2025 03:50:40 Europe/Berlin] 🔧 obtenerGastos() ejecutándose...
+[01-Jul-2025 03:50:40 Europe/Berlin] ✅ Sesión válida: Angel Steven
+[01-Jul-2025 03:50:41 Europe/Berlin] ✅ Conexión DB exitosa
+[01-Jul-2025 03:50:41 Europe/Berlin] ✅ Gastos encontrados: 2
+[01-Jul-2025 03:50:41 Europe/Berlin] ✅ Enviando respuesta JSON: {"success":true,"gastos":[{"id":24,"descripcion":"sda","categoria":"materiales","fecha_gasto":"2025-06-30","total":155,"metodo_pago":"tarjeta_credito","pagado_por":"empleado","estado":"desaprobado","archivo_recibo":null,"fecha_creacion":"2025-06-30 20:26:16","empleado":"Angel Steven","notas":""},{"id":4,"descripcion":"cuarto","categoria":"hospedaje","fecha_gasto":"2025-06-24","total":140,"metodo_pago":"efectivo","pagado_por":"empleado","estado":"aprobado","archivo_recibo":"recibo_685b3b19c17cb.jpg","fecha_creacion":"2025-06-24 18:56:09","empleado":"Dietri Josue","notas":"sdasdsad"}],"total_encontrados":2,"usuario":"Angel Steven","debug":"Funci\u00f3n ejecutada correctamente"}
+[01-Jul-2025 03:51:31 Europe/Berlin] 🔧 obtenerGastos() ejecutándose...
+[01-Jul-2025 03:51:31 Europe/Berlin] ✅ Sesión válida: Angel Steven
+[01-Jul-2025 03:51:31 Europe/Berlin] ✅ Conexión DB exitosa
+[01-Jul-2025 03:51:31 Europe/Berlin] ✅ Gastos encontrados: 2
+[01-Jul-2025 03:51:31 Europe/Berlin] ✅ Enviando respuesta JSON: {"success":true,"gastos":[{"id":24,"descripcion":"sdagki","categoria":"materiales","fecha_gasto":"2025-06-30","total":155,"metodo_pago":"tarjeta_credito","pagado_por":"empleado","estado":"desaprobado","archivo_recibo":null,"fecha_creacion":"2025-06-30 20:26:16","empleado":"Angel Steven","notas":""},{"id":4,"descripcion":"cuarto","categoria":"hospedaje","fecha_gasto":"2025-06-24","total":140,"metodo_pago":"efectivo","pagado_por":"empleado","estado":"aprobado","archivo_recibo":"recibo_685b3b19c17cb.jpg","fecha_creacion":"2025-06-24 18:56:09","empleado":"Dietri Josue","notas":"sdasdsad"}],"total_encontrados":2,"usuario":"Angel Steven","debug":"Funci\u00f3n ejecutada correctamente"}

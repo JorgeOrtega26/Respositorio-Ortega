@@ -1,0 +1,645 @@
+/* ESTILOS PRINCIPALES PARA REPORTES - VERSIÓN CORREGIDA */
+
+/* Variables CSS para mejor mantenimiento */
+:root {
+  --primary-gradient: linear-gradient(135deg, #6f58e0 0%, #6f58e0 100%);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --border-radius: 15px;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --sidebar-width: 250px; /* Ajustar según tu sidebar */
+}
+
+/* Contenedor principal mejorado */
+.reportes-container {
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  padding: 20px;
+  /* Ajuste para sidebar */
+  margin-left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cuando el sidebar está activo */
+.sidebar-active .reportes-container {
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+}
+
+/* Header mejorado */
+.reportes-header {
+  background: rgb(255 255 255 / 95%);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.reportes-title {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Filtros de fecha mejorados */
+.filtros-fecha {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filtros-fecha label {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.filtros-fecha input {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+
+.btn-actualizar {
+  background: linear-gradient(135deg, #00b894, #00a085);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.btn-actualizar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+}
+
+/* Grid de métricas mejorado */
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.metrica-card {
+  background: rgb(255 255 255 / 95%);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metrica-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.metrica-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+}
+
+.metrica-numero {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  word-break: break-all;
+}
+
+.metrica-label {
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.metrica-icon {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+/* Colores específicos para métricas */
+.productos-registrados .metrica-icon {
+  color: #6c5ce7;
+}
+.total-compras .metrica-icon {
+  color: #fd79a8;
+}
+.gastos-fijos .metrica-icon {
+  color: #fdcb6e;
+}
+.total-ventas .metrica-icon {
+  color: #00b894;
+}
+.ganancia-bruta .metrica-icon {
+  color: #0984e3;
+}
+.igv-total .metrica-icon {
+  color: #e17055;
+}
+.ventas-dia .metrica-icon {
+  color: #a29bfe;
+}
+
+/* Contenedor de gráfico mejorado */
+.grafico-container {
+  background: rgb(255 255 255 / 95%);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+}
+
+.grafico-title {
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.chart-canvas {
+  max-height: 400px;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Contenedor de tablas mejorado */
+.tablas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tabla-card {
+  background: rgb(255 255 255 / 95%);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  overflow-x: auto;
+}
+
+.tabla-title {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tablas responsivas */
+.tabla-productos,
+.tabla-vendedores {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+}
+
+.tabla-productos th,
+.tabla-productos td,
+.tabla-vendedores th,
+.tabla-vendedores td {
+  padding: 8px 4px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  word-break: break-word;
+}
+
+.tabla-productos th,
+.tabla-vendedores th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: var(--text-primary);
+  position: sticky;
+  top: 0;
+}
+
+.tabla-productos tbody tr:hover,
+.tabla-vendedores tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Artículo más vendido */
+.articulo-mas-vendido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  min-height: 150px;
+}
+
+.articulo-mas-vendido h3 {
+  color: var(--text-primary);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.articulo-nombre {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: bold;
+  color: #0984e3;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* DEBUG INFO */
+.debug-info {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-size: 12px;
+  border-left: 4px solid #e74c3c;
+  overflow-x: auto;
+}
+
+.debug-info h4 {
+  margin: 0 0 10px 0;
+  color: #e74c3c;
+}
+
+/* RESPONSIVE BREAKPOINTS MEJORADOS */
+
+/* Tablets grandes y desktop pequeño */
+@media (max-width: 1200px) {
+  .tablas-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  /* Ajuste para sidebar en tablets */
+  .sidebar-active .reportes-container {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .reportes-container {
+    padding: 15px;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+
+  .filtros-fecha {
+    gap: 15px;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .reportes-container {
+    padding: 10px;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .reportes-header {
+    padding: 15px;
+  }
+
+  .filtros-fecha {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .filtros-fecha input,
+  .btn-actualizar {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+  }
+
+  .metrica-card {
+    padding: 15px;
+    min-height: 100px;
+  }
+
+  .grafico-container {
+    padding: 15px;
+  }
+
+  .chart-canvas {
+    max-height: 300px;
+  }
+
+  .tabla-card {
+    padding: 15px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .reportes-container {
+    padding: 8px;
+  }
+
+  .reportes-header {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .metricas-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .metrica-card {
+    padding: 12px;
+    min-height: 90px;
+  }
+
+  .grafico-container {
+    padding: 12px;
+  }
+
+  .chart-canvas {
+    max-height: 250px;
+  }
+
+  .tabla-card {
+    padding: 12px;
+  }
+
+  .tabla-productos th,
+  .tabla-productos td,
+  .tabla-vendedores th,
+  .tabla-vendedores td {
+    padding: 4px 2px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 320px) {
+  .metricas-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .filtros-fecha input,
+  .btn-actualizar {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Orientación landscape en móviles */
+@media (orientation: landscape) and (max-height: 500px) {
+  .reportes-container {
+    padding: 8px;
+  }
+
+  .reportes-header {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+  }
+
+  .metrica-card {
+    padding: 8px;
+    min-height: 70px;
+  }
+
+  .chart-canvas {
+    max-height: 200px;
+  }
+}
+
+/* Zoom handling - Mejoras para diferentes niveles de zoom */
+@media (min-resolution: 1.25dppx) {
+  .metrica-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .reportes-header {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Estados de carga */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #667eea;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metrica-card,
+.tabla-card,
+.grafico-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Accesibilidad */
+.btn-actualizar:focus,
+.filtros-fecha input:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Reducir movimiento para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  .metrica-card,
+  .tabla-card,
+  .grafico-container {
+    animation: none;
+  }
+
+  .metrica-card:hover,
+  .btn-actualizar:hover {
+    transform: none;
+  }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: rgba(45, 52, 54, 0.95);
+    --text-primary: #000000;
+    --text-secondary: #b2bec3;
+  }
+
+  .debug-info {
+    background: rgba(45, 52, 54, 0.95);
+    color: #ddd;
+    border-left-color: #e74c3c;
+  }
+
+  .debug-info h4 {
+    color: #ff6b6b;
+  }
+}
+
+/* Impresión */
+@media print {
+  .reportes-container {
+    background: white !important;
+    padding: 0;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .reportes-header {
+    background: white !important;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .filtros-fecha {
+    display: none;
+  }
+
+  .metrica-card,
+  .grafico-container,
+  .tabla-card {
+    background: white !important;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+
+  .debug-info {
+    display: none;
+  }
+
+  .chart-canvas {
+    max-height: 300px;
+  }
+}
+
+/* Dispositivos táctiles */
+@media (hover: none) {
+  .metrica-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-light);
+  }
+
+  .btn-actualizar:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Contenedor principal para evitar overflow */
+.main {
+  overflow-x: hidden;
+}
+
+/* Asegurar que el contenido no se salga en zoom */
+* {
+  box-sizing: border-box;
+}
+
+/* Mejoras específicas para el sidebar */
+@media (min-width: 769px) {
+  .sidebar-active .reportes-container {
+    transition: margin-left 0.3s ease, width 0.3s ease;
+  }
+}
+
+/* Forzar recálculo en zoom */
+.reportes-container * {
+  max-width: 100%;
+}

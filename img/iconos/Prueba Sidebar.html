@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost/erp/pruebas.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prueba Sidebar</title>
+  <link rel="stylesheet" href="./Prueba Sidebar_files/siderbarycabezal.css">
+  <link rel="stylesheet" href="./Prueba Sidebar_files/all.min.css">
+  <style>
+    /* Un pequeño reset */
+    body { margin:0; display:flex; height:100vh; }
+    .main { flex:1; padding:20px; }
+  </style>
+<style type="text/css" id="operaUserStyle"></style><style type="text/css"></style><link rel="stylesheet" type="text/css" href="chrome-extension://jggobmlojchhlngdhmmdghgganciigof/css/translate_popup.css"></head>
+<body>
+
+  <!-- sólo heredamos el sidebar -->
+  <br>
+<b>Warning</b>:  include(sidebar.php): Failed to open stream: No such file or directory in <b>C:\xampp\htdocs\ERP\pruebas.php</b> on line <b>25</b><br>
+<br>
+<b>Warning</b>:  include(): Failed opening 'sidebar.php' for inclusion (include_path='C:\xampp\php\PEAR') in <b>C:\xampp\htdocs\ERP\pruebas.php</b> on line <b>25</b><br>
+
+  <!-- contenido de prueba -->
+  <div class="main">
+    <h1>Contenido de prueba</h1>
+    <p>Tu sidebar permanece fijo a la izquierda y aquí va tu contenido.</p>
+  </div>
+
+  <script>
+    document.querySelector('.menu-toggle')
+      .addEventListener('click', ()=> document.querySelector('.sidebar').classList.toggle('open'));
+
+    document.querySelector('.close-sidebar')
+      .addEventListener('click', ()=> document.querySelector('.sidebar').classList.remove('open'));
+  </script>
+
+</body></html>

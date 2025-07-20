@@ -1,0 +1,402 @@
+/* importa Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+/* -----------------------------------------
+   RESET Y BOX-SIZING (OJO NO TOCAR)
+----------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+font-family: "Proxima Nova", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  
+}
+
+/* -----------------------------------------
+   SIDEBAR (SI QUIEREN HACERLES MEJORAS)
+----------------------------------------- */
+/* 3) Sidebar abierta */
+.sidebar {
+  width: 260px;
+  background: #0b9085;
+  display: flex;
+    color: #fff;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  position: relative;
+}
+.sidebar a {
+  color: inherit;            /* para que los <a> hereden el blanco */
+  text-decoration: none;
+  font-weight: bold;
+}
+/* 4) Collapsar sidebar con .open */
+.sidebar.open {
+  width: 0;
+  overflow: hidden;
+}
+
+.brand {
+  background: #0b9085;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  position: relative;
+  padding: 0 16px;
+
+}
+.brand-logo {
+  max-height: 40px;
+  width: auto;
+}
+/* Estilos del buscador dentro de la sidebar */
+.search-sidebar {
+  display: flex;
+  width: 30px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+.search-sidebar i {
+  color: #ccc;               /* icono gris claro */
+  font-size: 1.2em;
+}
+.search-sidebar input {
+  flex: 1;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 40px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 0.95em;
+}
+.search-sidebar input::placeholder {
+  color: #eee;
+}
+
+/* Si quieres un pequeño hover en input */
+.search-sidebar input:focus {
+  outline: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+
+}
+/* No hay botón aquí: solo en el header ahora XD , PERO SI LE QUIEREN AGREGAR NORMALAZO , SOLO NO LAS VALLAS A CAGAR GORDO */
+
+/* Perfil DEJENLO ASI P NO LO MUEVAN POR QUE SE JODE EL RESPONISVE DE MRDA :,C*/
+.profile {
+  padding: 20px;
+  text-align: center;
+}
+.profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.profile .info {
+  margin-top: 10px;
+}
+
+/* Navegación lateral */
+nav {
+  flex: 1;
+  overflow-y: auto;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+
+  outline: 0.5px solid #ffffff;
+  outline-offset: -2px;
+  border-radius: 26px;
+}
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}.sidebar nav li a {
+  transition: none !important;
+}
+
+/* -----------------------------------------
+   MAIN Y HEADER
+----------------------------------------- */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  background: #fffdfd;
+  height: 55px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Botón DEL MENU DESPLEGABLE (siempre visible en el header) */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.6em;
+  cursor: pointer;
+  z-index: 10;
+ 
+}
+
+/* Buscador centrado */
+.search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+.search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+}
+.search input {
+  width: 100%;
+  padding: 8px 8px 8px 35px;
+  border: 1px solid #000000;
+  border-radius: 42px;
+}
+
+/* Botones y avatar */
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 15px;
+}
+.header-actions button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1em;
+  cursor: pointer;
+}
+.header-actions i {
+  font-size: 20px;
+}
+.header-actions button span {
+  display: none;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000000;
+  font-weight: bold;
+}
+.user-info img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Contenido principal (ELIMINENLO SI LES JODE AL MOMENTO DE IMPORTAR ALGO IGUAL NO AFECTA CASI NADA PERO SI AFECTA TAMBIEN
+QUITENLO DEL HTML TAMBIEN Y ME AVISAN
+POR FA ) */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f9fafc;
+  overflow-y: auto;
+}
+
+
+/* -----------------------------------------
+   COLAPSO DE SIDEBAR
+----------------------------------------- */
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+}
+.sidebar.collapsed + .main {
+  margin-left: 0;
+}
+
+/* -----------------------------------------
+   MEDIA QUERIES PARA RESPONSIVE
+----------------------------------------- */
+/* 1) Pantallas <1200px */
+@media (max-width: 1199px) {
+  .sidebar {
+    width: 200px;
+  }
+  header {
+    padding: 0 12px;
+  }
+  .search {
+    width: 60%;
+  }
+}
+
+/* 2) Pantallas <992px */
+@media (max-width: 991px) {
+  /* Sidebar oculta por defecto */
+  .sidebar {
+    width: 0;
+    visibility: hidden;
+  }
+  .sidebar:not(.collapsed) {
+    visibility: visible;
+    width: 240px;
+  }
+  .sidebar + .main {
+    margin-left: 0;
+  }
+
+  /* Toggle en flujo normal */
+  .menu-toggle {
+    position: relative;
+    transform: none;
+    margin-right: 12px;
+  }
+
+  /* Buscador ocupa casi todo */
+  .search {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: calc(100% - 48px);
+    margin-right: auto;
+  }
+
+  /* Solo íconos en acciones */
+  .header-actions button {
+    padding: 0 8px;
+  }
+  .header-actions i {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 575px) {
+  /* 1) Ocultar el botón “Agregar” */
+  .header-actions .btn-add {
+    display: none;
+  }
+
+  /* 2) Reducir la barra de búsqueda a un icono */
+  .search {
+    width: auto;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .search input {
+    display: none;
+  }
+  .search i {
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #fff;
+  }
+
+  /* 3) Al tener .open, desplegar el input debajo */
+  .search.open input {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+    z-index: 200;
+  }
+
+  /* 4) Permitir scroll horizontal en el header */
+  header {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* 5) Evitar encogimiento de toggle, lupa y acciones esta con fontawesone si le encuentran un mejor diseño pa la lupita
+  me avisan p para cambiarlo ojo es de fontawesone usen la version gratis no jodan con comprar una lupita de mrda  */
+  .menu-toggle,
+  .header-actions {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  /* 6) Ocultar el nombre de usuario para ganar espacio */
+  .header-actions .user-info span {
+    display: none;
+  }
+
+  /* 7) Sidebar como drawer full-screen, oculto por defecto */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+
+    width: 300px;
+
+    height: 100vh;
+    background: #424242; /* tu gris oscuro */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 300;
+  }
+  /* Al tener .open, la sidebar se desliza dentro */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* 8) Main siempre a full-width */
+  .main {
+    margin-left: 0 !important;
+  }
+}
+.close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6em;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* Solo en móvil lo mostramos y lo posicionamos cerca del logo */
+@media (max-width: 575px) {
+  .close-sidebar {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}

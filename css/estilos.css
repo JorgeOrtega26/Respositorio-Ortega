@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://img.freepik.com/vector-premium/fondo-rayas-lujo-diseno-empresas_518299-1597.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 80px;
+  overflow: hidden;
+  min-height: 500px; /* Mayor altura */
+    transform: scale(0.75);
+  transform-origin: center center;
+}
+.card {
+  padding: 40px 30px;
+}
+.login-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.welcome-card {
+  flex: 1;
+  background: #000000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 80px 0 0 80px;
+  padding: 40px 30px;
+}
+.login-card h2,
+.welcome-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #dfd6d6;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.input-group i {
+  color: #888;
+  margin-right: 10px;
+}
+.input-group input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 1em;
+  outline: none;
+}
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-login {
+  width: 100%;
+  background: #000000;
+  color: #fff;
+  border: none;
+  transition: background .2s;
+}
+.btn-login:hover {
+  background: #4a4d4c;
+}
+.btn-register {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  align-self: center;
+}
+.btn-register:hover {
+  background: rgba(255,255,255,0.2);
+}
+.welcome-card p {
+  margin-bottom: 30px;
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .login-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .welcome-card {
+    border-radius: 0 0 8px 8px;
+  }
+}

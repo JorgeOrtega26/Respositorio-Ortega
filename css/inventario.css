@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+  }
+  
+  .header {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+  }
+  
+  .tabs {
+    display: flex;
+    background: #f8f9fa;
+  }
+  
+  .tab {
+    padding: 12px 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .tab.active {
+    background: white;
+    color: #333;
+    border-bottom-color: #007bff;
+  }
+  
+  .tab:hover {
+    background: #e9ecef;
+  }
+  
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: #ffc107;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+  }
+  
+  .product-image {
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  .image-placeholder {
+    font-size: 32px;
+    color: #999;
+  }
+  
+  .checkboxes {
+    display: flex;
+    gap: 20px;
+    padding: 15px 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .checkboxes input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .form-tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+  }
+  
+  .form-tab {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .form-tab.active {
+    color: #333;
+    border-bottom-color: #007bff;
+    background: white;
+  }
+  
+  .form-tab:hover {
+    background: #e9ecef;
+  }
+  
+  .alert {
+    padding: 12px 30px;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .alert.success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+  }
+  
+  .alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+  }
+  
+  .inventory-form {
+    padding: 30px;
+  }
+  
+  .form-section {
+    margin-bottom: 40px;
+  }
+  
+  .form-section h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .input-with-unit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .input-with-unit input {
+    border: none;
+    flex: 1;
+    padding: 10px 12px;
+  }
+  
+  .input-with-unit input:focus {
+    box-shadow: none;
+  }
+  
+  .currency {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-right: 1px solid #ddd;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .unit {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-left: 1px solid #ddd;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background: #545b62;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .product-header {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  
+    .checkboxes {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .form-tabs {
+      flex-wrap: wrap;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  }
+  
